@@ -1,9 +1,9 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AddNote from "./components/AddNote";
 import Navbar from "./components/Navbar";
+import NoteDetails from "./components/NoteDetails";
 import NotesList from './components/NotesList';
-import AddNote from './components/AddNote';
-import NoteDetails from './components/NoteDetails';
 import NotFound from './components/NotFound';
 
 function App() {

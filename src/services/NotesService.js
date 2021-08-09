@@ -5,15 +5,15 @@ const getAll = () => {
 }
 
 const create = data => {
-    return httpClient.post("/notes", data)
+    return httpClient.post("/notes", data);
 }
 
 const get = id => {
-    return httpClient.get(`/notes/${id}`)
+    return httpClient.get(`/notes/${id}`);
 }
 
 const remove = id => {
-    return httpClient.delete(`/notes/${id}`)
+    return httpClient.delete(`/notes/${id}`);
 }
 
 const update = data => {

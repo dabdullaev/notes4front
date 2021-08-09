@@ -20,7 +20,7 @@ const AddNote = () => {
                     history.push("/");
                 })
                 .catch(error => {
-                    console.log("Could not update the note. ", error);
+                    console.log("Something went wrong", error);
                 })
         } else {
             //call the service create method
@@ -30,7 +30,7 @@ const AddNote = () => {
                 history.push("/");
             })
             .catch(error => {
-                console.log('Could not create the note. ', error);
+                console.log('something went wroing', error);
             })
         }
     }

@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
-import { useHistory } from "react-router-dom";
+import { useHistory, useParams } from "react-router";
 import NotesService from "../services/NotesService";
 
 const NoteDetails = () => {
@@ -14,23 +13,25 @@ const NoteDetails = () => {
                 setCurrentNote(note.data);
             })
             .catch(error => {
-                console.log('Something went wrong. ', error);
+                console.log('Something went wrong', error);
             })
     }, []);
 
     const handleDelete = () => {
-        NotesService.remove(id).then(note => {
-            history.push("/");
-        }).catch(error => {
-            console.log('Could not delete the note. ', error);
-        })
+        NotesService.remove(id)
+            .then(response => {
+                history.push("/");
+            })
+            .catch(error => {
+                console.log("Something went wrong", error);
+            })
     }
 
     const handleEdit = () => {
-        history.push(`/notes/edit/:${id}`)
+        history.push(`/notes/edit/${id}`);
     }
 
-    return (
+    return (  
         <div className="note-details main-content">
             <article>
                 <h5 className="text-capitalize primary-color">{currentNote.title}</h5>
