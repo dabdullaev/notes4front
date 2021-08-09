@@ -2,6 +2,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import NotesList from './components/NotesList';
+import AddNote from './components/AddNote';
 import NotFound from './components/NotFound';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <div>
           <Switch>
             <Route exact path="/" component={NotesList} />
+            <Route path="/add" component={AddNote} />
             <Route path="*" component={NotFound} />
           </Switch>
         </div>

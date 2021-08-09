@@ -3,14 +3,14 @@ import { useHistory } from "react-router";
 import NotesService from "../services/NotesService";
 
 const AddNote = () => {
-    const[title, setTitle] = useState('');
-    const[body, setBody] = useState('');
-    const[category, setCategory] = useState('programming');
+    const [title, setTitle] = useState('');
+    const [body, setBody] = useState('');
+    const [category, setCategory] = useState('programming');
     const history = useHistory();
 
     const saveNote = (e) => {
         e.preventDefault();
-        const note = {title, body, category};
+        const note = { title, body, category };
         NotesService.create(note)
             .then(response => {
                 console.log("Note added successfully", response.data);
@@ -28,8 +28,8 @@ const AddNote = () => {
                 <div className="form-group">
 
                     <label htmlFor="title">Note Title: <sup>*</sup></label>
-                    <input 
-                        type="text" 
+                    <input
+                        type="text"
                         className="form-control"
                         id="title"
                         value={title}
@@ -40,7 +40,7 @@ const AddNote = () => {
                 <div className="form-group">
 
                     <label htmlFor="body">Note Description: <sup>*</sup></label>
-                    <textarea 
+                    <textarea
                         id="body"
                         className="form-control"
                         value={body}
@@ -70,5 +70,5 @@ const AddNote = () => {
         </div>
     );
 }
- 
+
 export default AddNote;
