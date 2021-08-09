@@ -16,7 +16,7 @@ const NoteDetails = () => {
             })
     }, []);
 
-    return (  
+    return (
         <div className="note-details main-content">
             <article>
                 <h5 className="text-capitalize primary-color">{currentNote.title}</h5>
