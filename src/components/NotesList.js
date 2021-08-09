@@ -28,7 +28,7 @@ const NotesList = () => {
                         <div key={note.id} className="notes-preview mt-3">
                             <Link to={`/notes/${note.id}`}>
                                 <h5 className="primary-color text-capitalize">{note.title}</h5>
-                                <Moment fromNow className="text-italic">{note.updateAt}</Moment>
+                                <Moment fromNow className="text-italic">{note.updatedAt}</Moment>
                             </Link>
                         </div>
                     )) : <div>No notes available</div>
