@@ -8,9 +8,14 @@ const AddNote = () => {
     const[category, setCategory] = useState('programming');
     const history = useHistory();
     const {id} = useParams();
+    const [errors, setErrors] = useState(false)
 
     const saveNote = (e) => {
         e.preventDefault();
+        if (!title || !body){
+            setErrors(true);
+            return;
+        }
         const note = {title, body, category, id};
         if (id) {
             //call the service update method
@@ -53,6 +58,7 @@ const AddNote = () => {
         <div className="create">
             <div className="text-center">
                 <h5>{id ? "Update a Note" : "Add a New Note"}</h5>
+                {errors && <span styloe={{color: 'red', fontStyle: 'italic'}}>Please enter the mandatory fields</span>}
             </div>
             <form>
                 <div className="form-group">
