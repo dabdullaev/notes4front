@@ -7,14 +7,14 @@
   color: #333;
 }
 button {
-  background: #14b7e9f8;
+  background: #79589f;
   color: white;
   border: 0;
   padding: 5px 10px;
   cursor: pointer;
 }
 .primary-color {
-  color: #14b7e9f8;
+  color: #79589f;
 }
 /* navbar */
 .navbar {
@@ -31,7 +31,7 @@ button {
 }
 .navbar a:hover {
   text-decoration: none;
-  color: #14b7e9f8;
+  color: #79589f;
 }
 
 /* notes list */
